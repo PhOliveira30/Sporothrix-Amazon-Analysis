@@ -1,15 +1,23 @@
-## Scripts Overview and Objectives
+# Sporothrix Amazon Analysis
+*Repository containing the computational scripts and raw datasets for the phenotypic and genotypic analysis of Sporothrix brasiliensis isolates.*
 
-*   **`boxplot_enzymatic.R`**: Visualizes the distribution of enzymatic activity (Pz ratios) for phospholipase and lipase across feline and human isolates.
-*   **`pca_multivariate.py`**: Performs Principal Component Analysis (PCA) and K-means clustering to explore grouping patterns based on combined genetic and enzymatic phenotypic data.
-*   **`pcoa_genetic.R`**: Conducts Principal Coordinates Analysis (PCoA) using the K80 evolutionary model to assess the genetic population structure of the isolates.
-*   **`mann_whitney_test.py`**: Applies the non-parametric Mann-Whitney U test to statistically compare the enzymatic activity medians between human and feline isolates.
+## 🗂️ Scripts & Datasets Overview
 
-### Cloud Execution (Google Colab)
-If you are running these scripts in cloud-based notebooks such as Google Colab, please note that the session storage is temporary. You must manually upload the corresponding data files to the cloud working directory (typically the `/content/` folder) before executing the scripts:
+Para facilitar a reprodutibilidade, a tabela abaixo mapeia cada script à sua respetiva base de dados e objetivo analítico:
 
-*   **For `boxplot_enzymatic.R`**: Upload the `BOXPLOT_IMPUT.xlsx` file.
-*   **For `pcoa_genetic.R`**: Upload the `CONCATENED_MLST.fas` file.
-*   **For `mann_whitney_test.py`**: Upload the `Mann_Whitney_Test.xlsx` file.
+| Script File | Language | Required Input File | Objective |
+| :--- | :--- | :--- | :--- |
+| **`boxplot_enzymatic1.R`** | R | `BOXPLOT_IMPUT1.xlsx` | Visualizes overall enzymatic activity (Pz ratios) comparing phospholipase and lipase (with Wilcoxon test). |
+| **`boxplot_enzymatic2.R`** | R | `BOXPLOT_IMPUT2.xlsx` | Stratifies enzymatic activity (Pz ratios) to compare feline and human isolates. |
+| **`pca_multivariate.py`** | Python | *Interactive prompt* | Performs PCA and K-means clustering on combined genetic and phenotypic data. |
+| **`pcoa_genetic.R`** | R | `CONCATENED_MLST.fas` | Conducts PCoA using the best-fit evolutionary model to assess genetic population structure. |
+| **`mann_whitney_test.py`** | Python | `Mann_Whitney_Test.xlsx` | Applies the Mann-Whitney U test to compare enzymatic activity medians between host groups. |
 
-*(Note: The script `pca_multivariate.py` already includes an interactive prompt that will ask you to upload the data file during execution).*
+## ☁️ Cloud Execution (Google Colab)
+If you are running these scripts in cloud-based notebooks (such as Google Colab), session storage is temporary. 
+
+**Important:** You must manually upload the corresponding input file (listed in the table above) to the cloud working directory (e.g., `/content/`) **before** executing the R or Python script. 
+
+## 🛠️ Main Dependencies
+* **R Packages:** `ggplot2`, `dplyr`, `tidyr`, `readxl`
+* **Python Libraries:** `pandas`, `scipy`, `matplotlib`, `seaborn`, `scikit-learn`

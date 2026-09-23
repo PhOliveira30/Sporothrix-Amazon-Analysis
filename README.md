@@ -9,7 +9,7 @@ Para facilitar a reprodutibilidade, a tabela abaixo mapeia cada script à sua re
 | :--- | :--- | :--- | :--- |
 | **`boxplot_enzymatic1.R`** | R | `BOXPLOT_IMPUT1.xlsx` | Visualizes overall enzymatic activity (Pz ratios) comparing phospholipase and lipase (with Wilcoxon test). |
 | **`boxplot_enzymatic2.R`** | R | `BOXPLOT_IMPUT2.xlsx` | Stratifies enzymatic activity (Pz ratios) to compare feline and human isolates. |
-| **`pca_multivariate.py`** | Python | *Interactive prompt* | Performs PCA and K-means clustering on combined genetic and phenotypic data. |
+| **`pca_multivariate.py`** | Python | *Interactive prompt* PCA analisys.xlsx | Performs PCA and K-means clustering on combined genetic and phenotypic data. |
 | **`pcoa_genetic.R`** | R | `CONCATENED_MLST.fas` | Conducts PCoA using the best-fit evolutionary model to assess genetic population structure. |
 | **`mann_whitney_test.py`** | Python | `Mann_Whitney_Test.xlsx` | Applies the Mann-Whitney U test to compare enzymatic activity medians between host groups. |
 
